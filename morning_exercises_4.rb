@@ -1,4 +1,8 @@
-class AnimalReverse(animal)
+class AnimalReverse
+
+  def initialize(animal)
+   @animal = animal
+  end
 
   def individual_letters
     animal.split("")
