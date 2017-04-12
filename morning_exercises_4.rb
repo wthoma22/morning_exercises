@@ -5,13 +5,15 @@ class AnimalReverse
   end
 
   def individual_letters
-    animal.split("")
+    @animal.split("").to_a
   end 
   
   def reverse_letters
-    individual_letters[0..2 = individual_letters[2..0]]
+    reverse_animal = individual_letters.map do |letter|
+      letter.
   end 
 end 
 
 
 animal_1 = AnimalReverse.new('cow')
+puts animal_1.reverse_letters

@@ -1,20 +1,26 @@
-number = 0
-sum = 0
+class SquaredSum
 
-100.times do |x|
-    x += 1
-    number = sum += x
+    def sum_of_all_squares
+
+        numbers = [1..100]
+        num_1 = numbers.map do |number|
+        number.sum
+        end
+
+    end
+
+    puts "The square of all sums is #{num_1**2}"
+
+    def square_of_all_sums
+
+        numbers = [1..100]
+        num_2 = numbers.map do |number|
+        number**2.sum
+        end
+    end
+
+    puts "The sum of all squares is #{num_2}"
+
+    puts "The difference is #{num_1**2 - num_2}"
+
 end
-
-puts "The square of all sums is #{number ** 2}"
-
-sum_2 = 0
-
-100.times do |x|
-    y = (x + 1) ** 2
-    sum_2 += y
-end
-
-puts "The sum of all squares is #{sum_2}"
-
-puts "The differnece is #{number ** 2 - sum_2}"

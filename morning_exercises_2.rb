@@ -1,8 +1,10 @@
-numbers = [0, 1]
+class Fibonacci
 
-until numbers == 25
-    sum = numbers [-1] + numbers [-2]
-    numbers.push(sum)
+    def nth_fibonacci
+    (1..num).inject([0, 1]) do |fib|
+    fib << fib.last(2).inject(:+)
+    end.last
+    
 end
 
-puts #{sum}
+nth_fibonacci 25
